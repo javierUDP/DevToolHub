@@ -102,3 +102,37 @@ body {
         margin-bottom: 1.5rem;
     }
 }
+
+
+.row-cols-lg-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* Badge para herramienta popular */
+.badge-popular {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #ff4757;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(255, 71, 87, 0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+/* Ajustes de altura para consistencia */
+.tool-card {
+    height: 220px; /* Altura fija para igualar tarjetas */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

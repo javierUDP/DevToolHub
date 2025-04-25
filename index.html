@@ -39,46 +39,49 @@
 
     <main class="main-content">
         <div class="container">
-            <div class="row g-4 mb-5">
-                <!-- Fila 1 -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="tool-card" onclick="loadTool('readme-generator')">
-                        <div class="card-icon">📄</div>
-                        <h3>Generador README</h3>
-                        <p>Crea READMEs profesionales para GitHub</p>
-                    </div>
-                </div>
-                
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="tool-card" onclick="loadTool('json-formatter')">
-                        <div class="card-icon">🧑💻</div>
-                        <h3>Formateador JSON</h3>
-                        <p>Valida y formatea código JSON</p>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-6 col-lg-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4"> <!-- 3 columnas en LG -->
+                <!-- Generador QR (Primera posición) -->
+                <div class="col">
                     <div class="tool-card" onclick="loadTool('qr-generator')">
                         <div class="card-icon">🔳</div>
                         <h3>Generador QR</h3>
                         <p>Crea códigos QR personalizados</p>
+                        <div class="badge-popular">¡Más buscado! 🔥</div>
                     </div>
                 </div>
-
-                <!-- Fila 2 -->
-                <div class="col-12 col-md-6 col-lg-4">
+    
+                <!-- README Generator -->
+                <div class="col">
+                    <div class="tool-card" onclick="loadTool('readme-generator')">
+                        <div class="card-icon">📄</div>
+                        <h3>Generador README</h3>
+                        <p>Crea READMEs profesionales</p>
+                    </div>
+                </div>
+    
+                <!-- JSON Formatter -->
+                <div class="col">
+                    <div class="tool-card" onclick="loadTool('json-formatter')">
+                        <div class="card-icon">🧑💻</div>
+                        <h3>Formateador JSON</h3>
+                        <p>Valida y formatea código</p>
+                    </div>
+                </div>
+    
+                <!-- JSON/YAML Converter -->
+                <div class="col">
                     <div class="tool-card" onclick="loadTool('json-to-yaml')">
                         <div class="card-icon">🔄</div>
                         <h3>JSON ⇄ YAML</h3>
-                        <p>Convierte entre JSON y YAML</p>
+                        <p>Convierte configuraciones</p>
                     </div>
                 </div>
-
+    
                 <!-- Espacio para futuras herramientas -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col">
                     <div class="tool-card coming-soon">
-                        <div class="card-icon">🚧</div>
-                        <h3>Más herramientas</h3>
+                        <div class="card-icon">🚀</div>
+                        <h3>Más Herramientas</h3>
                         <p>¡Próximamente!</p>
                     </div>
                 </div>

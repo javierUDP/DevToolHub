@@ -33,17 +33,11 @@ body {
 }
 
 .tool-card {
-    background: white;
-    border: none;
-    border-radius: 12px;
-    padding: 2rem;
-    margin-bottom: 1rem;
-    transition: all 0.3s ease;
     height: 100%;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tool-card:hover {
@@ -66,9 +60,15 @@ body {
     font-size: 0.95rem;
 }
 
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1.5rem;
+}
+
 .card-icon {
     font-size: 2.5rem;
-    transition: transform 0.3s ease;
+    margin-bottom: 1rem;
+    display: inline-block;
 }
 
 .coming-soon {
@@ -100,5 +100,12 @@ body {
     
     .tool-card {
         margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .row-cols-lg-3 > * {
+        flex: 0 0 auto;
+        width: 33.33333333%;
     }
 }

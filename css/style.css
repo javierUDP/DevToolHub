@@ -106,7 +106,6 @@ body {
 
 .row-cols-lg-3 {
     grid-template-columns: repeat(3, 1fr);
-    display: flex;
 }
 
 /* Badge para herramienta popular */

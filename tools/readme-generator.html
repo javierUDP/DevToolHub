@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de README - DevTools+</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        .generator-container {
+            background: #f8f9fa;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        #output {
+            background: #1e1e1e;
+            color: #d4d4d4;
+            font-family: 'Courier New', monospace;
+            border-radius: 8px;
+            max-height: 600px;
+            overflow-y: auto;
+        }
+        .form-section {
+            border-bottom: 1px solid #eee;
+            padding: 1.5rem 0;
+        }
+    </style>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXX'); // Tu ID de GA4 aquí
+    </script>
+
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row">
+            <!-- Anuncio Lateral (Ejemplo) -->
+            <div class="col-md-3 mb-4">
+                <div class="p-3 bg-white rounded">
+                    <h6 class="text-muted">Publicidad</h6>
+                    <img src="https://via.placeholder.com/200x400" class="img-fluid" alt="ads">
+                </div>
+            </div>
+
+            <!-- Generador -->
+            <div class="col-md-9">
+                <div class="generator-container p-4 bg-white">
+                    <h1 class="mb-4">📄 Generador de README.md</h1>
+                    <a href="../index.html" class="btn btn-outline-secondary mb-4">← Volver al inicio</a>
+
+                    <div class="form-section">
+                        <div class="mb-3">
+                            <label class="form-label">Título del Proyecto</label>
+                            <input type="text" id="project-title" class="form-control" placeholder="Mi Proyecto Increíble">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Descripción</label>
+                            <textarea id="project-description" class="form-control" rows="3" placeholder="Breve descripción de tu proyecto..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h5>Características Principales</h5>
+                        <div class="mb-3">
+                            <textarea id="features" class="form-control" rows="4" placeholder="- Funcionalidad 1
+- Funcionalidad 2"></textarea>
+                            <small class="text-muted">Usa viñetas (-) para cada característica</small>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h5>Instalación</h5>
+                        <div class="mb-3">
+                            <textarea id="installation" class="form-control" rows="3" placeholder="npm install
+pip install -r requirements.txt"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h5>Uso</h5>
+                        <div class="mb-3">
+                            <textarea id="usage" class="form-control" rows="3" placeholder="Ejemplos de cómo usar el proyecto..."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="mb-4">
+                        <button class="btn btn-primary w-100 py-2" onclick="generateREADME()">
+                            🚀 Generar README
+                        </button>
+                    </div>
+
+                    <!-- Output -->
+                    <h5 class="mt-4">Vista Previa:</h5>
+                    <pre id="output" class="p-3"></pre>
+                    
+                    <button class="btn btn-success w-100 mt-3" onclick="copyToClipboard()">
+                        📋 Copiar al Portapapeles
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function generateREADME() {
+            const title = document.getElementById('project-title').value;
+            const description = document.getElementById('project-description').value;
+            const features = document.getElementById('features').value;
+            const installation = document.getElementById('installation').value;
+            const usage = document.getElementById('usage').value;
+
+            if (!title || !description) {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Campos vacíos',
+                    text: '¡El título y la descripción son obligatorios!'
+                });
+                return;
+            }
+
+            const readmeContent = `# ${title}
+
+${description}
+
+## 🛠️ Características
+${features.split('\n').map(line => `- ${line}`).join('\n')}
+
+## 📦 Instalación
+\`\`\`bash
+${installation}
+\`\`\`
+
+## 🚀 Uso
+${usage}
+
+## 🤝 Contribuir
+Las contribuciones son bienvenidas. Abre un issue o envía un pull request.
+
+## 📄 Licencia
+MIT © [Tu Nombre](https://github.com/tu-usuario)
+            `;
+
+            document.getElementById('output').textContent = readmeContent;
+        }
+
+        function copyToClipboard() {
+            const output = document.getElementById('output');
+            
+            navigator.clipboard.writeText(output.textContent).then(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: '¡Copiado!',
+                    text: 'El README se ha copiado al portapapeles',
+                    timer: 2000
+                });
+            }).catch(err => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'No se pudo copiar el texto'
+                });
+            });
+        }
+    </script>
+</body>
+</html>

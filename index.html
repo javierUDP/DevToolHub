@@ -8,7 +8,7 @@
     <!-- Espacio para anuncios (ej: Google AdSense) -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-TU_ID_ANUNCIO"
      crossorigin="anonymous"></script>
-     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXX"></script>
+     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XM139X80BX"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -36,17 +36,36 @@
 
     <main>
         <section class="tools-list">
-            <div class="tool-card" onclick="loadTool('readme-generator')">
-                <h3>📄 Generador de README.md</h3>
-                <p>Crea un README profesional para tu repositorio.</p>
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="tool-card" onclick="loadTool('readme-generator')">
+                        <h3>📄 Generador README</h3>
+                        <p>Crea READMEs profesionales para GitHub.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tool-card" onclick="loadTool('json-formatter')">
+                        <h3>🧑💻 Formateador JSON</h3>
+                        <p>Valida y formatea código JSON.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="tool-card" onclick="loadTool('qr-generator')">
+                        <h3>🔳 Generador QR</h3>
+                        <p>Crea códigos QR personalizados.</p>
+                    </div>
+                </div>
             </div>
-            <div class="tool-card" onclick="loadTool('json-formatter')">
-                <h3>🧑💻 Formateador JSON</h3>
-                <p>Valida y formatea JSON con sintaxis coloreada.</p>
-            </div>
-            <div class="tool-card" onclick="loadTool('json-to-yaml')">
-                <h3>🔄 JSON ⇄ YAML</h3>
-                <p>Convierte configuraciones entre JSON y YAML al instante.</p>
+            
+            <!-- Fila 2 -->
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="tool-card" onclick="loadTool('json-to-yaml')">
+                        <h3>🔄 JSON ⇄ YAML</h3>
+                        <p>Convierte entre JSON y YAML.</p>
+                    </div>
+                </div>
+                
             </div>
         </section>
     </main>

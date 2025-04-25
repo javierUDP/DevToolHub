@@ -18,62 +18,82 @@
 
     <meta name="description" content="DevTools+ - Suite de herramientas gratuitas para desarrolladores: Generador de README, formateador JSON, conversores y más. ¡Optimiza tu flujo de trabajo!">
     <meta name="keywords" content="herramientas para desarrolladores, open source, generador de README, formateador JSON, github pages, herramientas gratis">
-    <meta name="author" content="Tu Nombre">
+    <meta name="author" content="Javier Alejandro Pérez Silva">
 
     <!-- Open Graph (Facebook, LinkedIn) -->
     <meta property="og:title" content="DevTools+ - Herramientas Gratis para Devs">
     <meta property="og:description" content="Genera READMEs profesionales, formatea JSON, convierte formatos y más. ¡Todo en un solo lugar!">
 </head>
 <body>
-    <header>
-        <h1>DevTools+</h1>
-        <p>Herramientas gratuitas para desarrolladores 👨💻</p>
-        <!-- Banner de anuncio -->
-        <div class="ad-banner">
-            tu anuncio puede aparecer acá 🤯
+    <header class="main-header py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-3">DevTools+</h1>
+            <p class="lead text-muted mb-4">Herramientas gratuitas para desarrolladores 👨💻</p>
+            
+            <!-- Banner de Anuncio -->
+            <div class="ad-banner rounded-3 p-3 mb-4">
+                <div class="ad-placeholder">Tu anuncio puede aparecer aquí 🤯</div>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section class="tools-list">
-            <div class="row g-4 mb-4">
-                <div class="col-md-4">
+    <main class="main-content">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <!-- Fila 1 -->
+                <div class="col-12 col-md-6 col-lg-4">
                     <div class="tool-card" onclick="loadTool('readme-generator')">
-                        <h3>📄 Generador README</h3>
-                        <p>Crea READMEs profesionales para GitHub.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="tool-card" onclick="loadTool('json-formatter')">
-                        <h3>🧑💻 Formateador JSON</h3>
-                        <p>Valida y formatea código JSON.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="tool-card" onclick="loadTool('qr-generator')">
-                        <h3>🔳 Generador QR</h3>
-                        <p>Crea códigos QR personalizados.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Fila 2 -->
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="tool-card" onclick="loadTool('json-to-yaml')">
-                        <h3>🔄 JSON ⇄ YAML</h3>
-                        <p>Convierte entre JSON y YAML.</p>
+                        <div class="card-icon">📄</div>
+                        <h3>Generador README</h3>
+                        <p>Crea READMEs profesionales para GitHub</p>
                     </div>
                 </div>
                 
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="tool-card" onclick="loadTool('json-formatter')">
+                        <div class="card-icon">🧑💻</div>
+                        <h3>Formateador JSON</h3>
+                        <p>Valida y formatea código JSON</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="tool-card" onclick="loadTool('qr-generator')">
+                        <div class="card-icon">🔳</div>
+                        <h3>Generador QR</h3>
+                        <p>Crea códigos QR personalizados</p>
+                    </div>
+                </div>
+
+                <!-- Fila 2 -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="tool-card" onclick="loadTool('json-to-yaml')">
+                        <div class="card-icon">🔄</div>
+                        <h3>JSON ⇄ YAML</h3>
+                        <p>Convierte entre JSON y YAML</p>
+                    </div>
+                </div>
+
+                <!-- Espacio para futuras herramientas -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="tool-card coming-soon">
+                        <div class="card-icon">🚧</div>
+                        <h3>Más herramientas</h3>
+                        <p>¡Próximamente!</p>
+                    </div>
+                </div>
             </div>
-        </section>
+        </div>
     </main>
 
-    <footer>
-        <p>¿Quieres anunciarte aquí? <a href="mailto:mrpicklesultra@gmail.com">Contáctame</a></p>
+    <footer class="main-footer py-4">
+        <div class="container text-center">
+            <p class="mb-0">¿Quieres anunciarte aquí? <a href="mailto:mrpicklesultra@gmail.com" class="text-white">Contáctame</a></p>
+        </div>
     </footer>
 
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

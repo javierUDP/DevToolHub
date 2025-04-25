@@ -136,3 +136,23 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.sticky-top {
+    padding: 15px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.adsbygoogle {
+    margin: 10px 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* En móviles: Ocultar sidebar */
+@media (max-width: 768px) {
+    .col-md-3 {
+        display: none;
+    }
+}
